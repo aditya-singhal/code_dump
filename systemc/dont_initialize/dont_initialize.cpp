@@ -1,4 +1,4 @@
-#include "systemc.h"
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc#include "systemc.h"
 
 SC_MODULE (tff_sync_reset) {
   sc_in    <bool> data, clk, reset  ;
@@ -64,7 +64,7 @@ SC_MODULE (tff_tb) {
 int sc_main (int argc, char* argv[]) {
   sc_clock clock ("my_clock",1,0.5);
 
-  tff_tb  object("TFF_TB");
+  tff_tb object("TFF_TB");
   object.clk (clock);
 
   //sc_start(0);

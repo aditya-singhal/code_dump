@@ -29,7 +29,7 @@ int sc_main (int argc, char* argv[]) {
 
   int z;
 
-  ports_arrays prt_ar("PORT_ARRAY");
+  ports_arrays prt_ar("prt_ar");
     for (z=0; z<4; z++) {
       prt_ar.a[z](a[z]);
       prt_ar.b[z](b[z]);

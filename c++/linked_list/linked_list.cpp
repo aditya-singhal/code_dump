@@ -45,8 +45,24 @@ void print() {
 }
 
 bool find_a_loop(){
+	struct Node* slow_ptr = NULL;
+	struct Node* fast_ptr = NULL;
 
+	if (is_empty()==true){
+		return false;
+	} else {
+		slow_ptr = pHead;
+		fast_ptr = pHead;
+		while(slow_ptr && fast_ptr && (fast_ptr->next)) {
+			slow_ptr = slow_ptr->next;
+			fast_ptr = (fast_ptr->next)->next;
+			if (slow_ptr == fast_ptr){
+				return true;
+			}
+		}
 
+		return false;
+	}
 }
 
 int main(){

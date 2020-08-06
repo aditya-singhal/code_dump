@@ -23,7 +23,7 @@ void two_processes::blinker_thread(void) {
 }
 
 int sc_main( int argc, char* argv[]) {
-	two_processes hello("hi");
+	two_processes hello("hello");
 	sc_start(50,SC_SEC);
 
 	return 0;

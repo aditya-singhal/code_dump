@@ -1,9 +1,9 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-SYSTEMC_HOME=/usr/local/systemc-2.3.3
-CPPFLAGS = -Wall
-LDFLAGS = -Wl,-rpath,$(SYSTEMC_HOME)/lib-linux64 -L$(SYSTEMC_HOME)/lib-linux64
+SYSTEMC_HOME=/usr/local/systemc233
+CPPFLAGS = -Wall --std=c++11
+LDFLAGS = -Wl,-rpath,$(SYSTEMC_HOME)/lib -L$(SYSTEMC_HOME)/lib
 LDLIBS = -lsystemc
 
 TARGET = ports_array

@@ -63,13 +63,13 @@ struct A {
 
 typedef struct {
 	uint8_t value;
-	node* next;
-}node;
+	Node* next;
+}Node;
 
 bool reverse_list(){
-	node* current_node = NULL;
-	node* prev_node = NULL;
-	node* next_node = NULL;
+	Node* current_node = NULL;
+	Node* prev_node = NULL;
+	Node* next_node = NULL;
 
 	if (is_empty()){
 		return false;

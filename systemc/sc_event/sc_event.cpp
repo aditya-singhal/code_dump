@@ -49,7 +49,7 @@ SC_MODULE (events) {
   }
 
   void func(){
-  	cout << "@" << sc_time_stamp() <<" I am in func"<<endl;
+    cout << "@" << sc_time_stamp() <<" I am in func"<<endl;
   	next_trigger(e3);
   }
 
@@ -67,7 +67,7 @@ int sc_main (int argc, char* argv[]) {
 
   sc_clock clock ("my_clock",period,0.5);
 
-  events  object("events");
+  events  object("object");
     object.clock (clock);
 
   //sc_start(0,SC_NS); // First time called will init schedular

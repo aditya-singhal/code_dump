@@ -2,7 +2,6 @@
 
 class singleton {
 	singleton();
-	~singleton();
 	static singleton* instance;
 public:
 	static singleton* get_object();
@@ -13,10 +12,6 @@ public:
 singleton::singleton() {
 	std::cout << "singleton class constructor\n";
 	value = 100;
-}
-
-singleton::~singleton() {
-	std::cout << "singleton class destructor\n";
 }
 
 void singleton::print() {

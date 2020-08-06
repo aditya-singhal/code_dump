@@ -2,8 +2,8 @@ CC=gcc
 CXX=g++
 RM=rm -f
 SYSTEMC_HOME=/usr/local/systemc233
-CPPFLAGS = -Wall
-LDFLAGS = -Wl,-rpath,$(SYSTEMC_HOME)/lib-linux64 -L$(SYSTEMC_HOME)/lib-linux64
+CPPFLAGS = -Wall --std=c++11
+LDFLAGS = -Wl,-rpath,$(SYSTEMC_HOME)/lib -L$(SYSTEMC_HOME)/lib
 LDLIBS = -lsystemc
 
 TARGET = hello_world

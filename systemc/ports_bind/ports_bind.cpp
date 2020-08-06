@@ -8,7 +8,7 @@ SC_MODULE (some_block) {
   sc_out<sc_bit> out;
 
   void body () {
-    cout << "@" << sc_time_stamp() <<" Inside body" << endl;
+    //cout << "@" << sc_time_stamp() <<" Inside body" << endl;
     if (reset.read() == 1) {
       out = sc_bit(0);
     } else if (inv.read() == 1) {
@@ -36,7 +36,7 @@ SC_MODULE (signal_bind) {
   int  done;
 
   void do_test() {
-    cout << "@" << sc_time_stamp() <<" Inside do_test" << endl;
+    //cout << "@" << sc_time_stamp() <<" Inside do_test" << endl;
     while (true) {
       wait();
       if (done == 0) {

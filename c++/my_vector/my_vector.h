@@ -7,3 +7,4 @@ public:
 	my_vector(int number);
 	int& operator[](int index);
 };
+

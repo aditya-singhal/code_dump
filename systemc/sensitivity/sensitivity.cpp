@@ -19,7 +19,7 @@ void two_processes::blinker_method(void) {
 int sc_main( int argc, char* argv[]) {
 	sc_signal<int> data_signal;
 
-	two_processes hello("hi");
+	two_processes hello("hello");
 	hello.data(data_signal);
 	sc_start(20,SC_NS);
 	//sc_start();

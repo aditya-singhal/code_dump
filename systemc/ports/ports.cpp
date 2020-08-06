@@ -40,7 +40,7 @@ int sc_main (int argc, char* argv[]) {
 
   sc_out <sc_lv<2> > out_port;
 
-  ports_access prt_ac("PORT_ACCESS");
+  ports_access prt_ac("prt_ac");
     prt_ac.a(a);
     prt_ac.b(b);
     prt_ac.en(en);

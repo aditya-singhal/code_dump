@@ -5,7 +5,7 @@
 bool substr_search(std::string str, std::string sub_str){
 	uint32_t count = 0;
 
-	for (int i=0; i<str.length();i++){
+	for (int i=0; i<=(str.length()-sub_str.length());i++){
 		for (int j=0; j<sub_str.length();j++){
 			if( str[i+j] == sub_str[j]) {
 				count++;
@@ -22,7 +22,7 @@ bool substr_search(std::string str, std::string sub_str){
 }
 
 int main(){
-	std::cout << "Is sub_str found: " << substr_search("hello", "ell") << "\n";
+	std::cout << "Is sub_str found: " << substr_search("hello", "oo") << "\n";
 	std::cout << "Is sub_str found: " << substr_search("hello", "elm") << "\n";
 	std::cout << "Is sub_str found: " << substr_search("helloworld", "owo") << "\n";
 	std::cout << "Is sub_str found: " << substr_search("helloworld", "owd") << "\n";

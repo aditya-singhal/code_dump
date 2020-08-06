@@ -26,6 +26,7 @@ SC_MODULE (sc_mutex_example) {
         bus.unlock();
       }
       if (cnt >= 3) {
+        cout << "@" << sc_time_stamp() <<" Maximum attempts reached!"<<endl;
         sc_stop(); // sc_stop triggers end of simulation
       }
     }

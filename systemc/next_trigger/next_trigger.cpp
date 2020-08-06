@@ -57,7 +57,7 @@ int sc_main (int argc, char* argv[]) {
   sc_time period(1,SC_NS);
   sc_clock clock ("my_clock",period,0.5);
 
-  next_trigger_example  object("wait");
+  next_trigger_example  object("object");
     object.clock (clock);
 
   //sc_start(1,SC_NS); // First time called will init schedular
