@@ -25,7 +25,7 @@ void reverse(uint32_t number){
 	std::cout << "Final number: "<< number << "\n";	
 }
 
-bool power_of_two(uint32_t number){
+bool even_number(uint32_t number){
 	if ( (number % 2 ) == 0){
 		std::cout << "Yes!\n";
 		return true;
@@ -60,31 +60,6 @@ struct A {
 	char *str = "hello"; 
 };
 
-
-typedef struct {
-	uint8_t value;
-	Node* next;
-}Node;
-
-bool reverse_list(){
-	Node* current_node = NULL;
-	Node* prev_node = NULL;
-	Node* next_node = NULL;
-
-	if (is_empty()){
-		return false;
-	}
-
-	current_node = head_node;
-	while(current_node != NULL){
-		next_node = current_node->next;
-		current_node->next = prev_node;
-		prev_node = current_node;
-		current_node = next_node;
-	}
-	head_node = prev_node;
-}
-
 bool string_reversal(std::string str){
 	uint8_t length = 0;
 
@@ -101,7 +76,7 @@ int main(){
 	std::cin >> number;
 
 	//reverse(number);
-	//power_of_two(number);
+	//even_number(number);
 	//swap_bits(number, 7,6);
 	A a_obj;
 	A *a_ptr = &a_obj;

@@ -1,4 +1,4 @@
-	#include <iostream>
+#include <iostream>
 
 class singleton {
 	singleton();
@@ -27,7 +27,7 @@ singleton* singleton::get_object() {
 	return instance;
 }
 
-singleton*::singleton::instance = NULL;
+singleton* singleton::instance = NULL;
 
 int main() {
 	singleton* obj1 = singleton::get_object();

@@ -5,20 +5,20 @@
 using namespace std; 
 
 void swap_char(char& a, char& b){
-	a = a+b;
+	a = a + b;
 	b = a - b;
 	a = a - b;
 }
 
 // Function to reverse a string 
-void reverseStr(string& str) 
-{ 
+void reverseStr(string& str) { 
 	int n = str.length(); 
 
 	// Swap character starting from two 
 	// corners 
-	for (int i = 0; i < n / 2; i++) 
+	for (int i = 0; i < n / 2; i++) {
 		swap_char(str[i], str[n - i - 1]); 
+	}
 } 
 
 // Driver program 

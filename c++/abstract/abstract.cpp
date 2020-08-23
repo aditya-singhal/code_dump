@@ -36,7 +36,7 @@ int main() {
     d1_ptr = static_cast<Derived*>(&also);
     d1_ptr->virtual_function();
 
-    Base b1;
+    //Base b1;
 
     return 0; 
 } 
