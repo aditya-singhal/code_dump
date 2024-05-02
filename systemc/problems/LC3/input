@@ -1,0 +1,39 @@
+# Test 1
+A 0x0000  # (0b0000 0000 0000 0000) # setting mem address to 0x0000
+D 0x0E0F  # (0000-1110-0001-0000) # BR 0x10
+D 0x0E1D  # (0000-1110-0010-0000) # BR 0x20
+
+A 0x0010  # Reset handler
+D 0x2C30  # initialize stack pointer R6 with 0x30
+D 0x0E3E  # Branch to application code 0x50
+
+A 0x0020  # IRQ handler
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x24FF  # (0b0010 0100 0000 1111) # LD R2 with data on PC-offset
+D 0x8000  # Call RTI instruction
+
+A 0x50
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset	
+D 0xF000  # Trap instruction to stop the execution
