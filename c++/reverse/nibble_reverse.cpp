@@ -1,12 +1,19 @@
 #include <iostream>
 
 void nibble_reverse( uint8_t number ){
+	bool is_msb_set = false;
+
 	std::cout << "before: " << (int)number << "\n";
 	for (int i=0; i<4; i++) {
-		if (((1<<7) & number) != 0){
-			number |= 0x01;
-		} 
+		if (((1<<7) & number) !=0 ){
+			is_msb_set = true;
+		} else {
+			is_msb_set = false;
+		}
 		number = number << 1;
+		if (is_msb_set == true) {
+			number |= 0x01;	
+		}
 	}
 	std::cout << "after: " << (int)number << "\n";
 }

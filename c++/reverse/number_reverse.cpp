@@ -3,7 +3,7 @@
 #include <math.h>
 #include <bitset>
 
-void reverse(uint32_t number){
+void reverse(uint32_t number) {
 	uint32_t arr[10] = {0};
 	uint32_t count = 0;
 	uint32_t index = 0;
@@ -11,7 +11,7 @@ void reverse(uint32_t number){
 	std::cout << "Enter number: \n";
 	std::cin >> number;
 
-	while(number){
+	while(number) {
 		arr[count] = number % 10;
 		number = number / 10;
 		count++;
@@ -42,12 +42,12 @@ void swap_bits(uint32_t number, uint8_t bit1, uint8_t bit2){
 	std::cout << "number: "<< std::bitset<32>(number) << "\n";
 	bit_value1 = (number >> bit1) & 0x01;
 	bit_value2 = (number >> bit2) & 0x01;
-	if(bit_value1 == 1){
+	if(bit_value1 == 1) {
 		number |= ( 1<<bit2);
 	} else {
 		number &= ~( 1<<bit2);
 	}
-	if(bit_value2 == 1){
+	if(bit_value2 == 1) {
 		number |= (1<<bit1);
 	} else {
 		number &= ~(1<<bit1);
@@ -69,7 +69,7 @@ bool string_reversal(std::string str){
 	}
 }
 
-int main(){
+int main() {
 	uint32_t number = 0;
 
 	std::cout << "Enter number: \n";

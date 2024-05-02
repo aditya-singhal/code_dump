@@ -10,8 +10,9 @@ int main() {
 	switch(count % 8){
 		case 0:
 			printf("hello\n");
-
-	printf("world\n");
+		
+		default:
+		printf("world\n");
 	}
 	
 	return 0;

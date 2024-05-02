@@ -1,7 +1,6 @@
 #include <iostream>
 
 void print_triangle( int height ) {
-
 	for (int row = height; row >= 1; row--) {
 		for (int column=1; column <= height;column++) {
 			if (column < row ) {

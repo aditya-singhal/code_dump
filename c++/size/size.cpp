@@ -17,7 +17,7 @@ int main(){
 
 	std::cout << "sizeof(b1): " << sizeof(b1) << "\n";
 	std::cout << "sizeof(d1): " << sizeof(d1) << "\n";
-	std::cout << "value: " << d1.Base::b << "\n";
+	std::cout << "value: " << d1.Derived::b << "\n";
 
 	return 0;
 }

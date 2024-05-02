@@ -1,0 +1,15 @@
+# This is a comment line
+# Blanks like below are ok
+
+# Line below specifies the address
+A 0
+D 901
+D 308
+D 901
+D 309
+D 508
+D 209
+D 902
+D 000
+
+# code end

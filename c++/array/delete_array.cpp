@@ -1,6 +1,6 @@
 #include <iostream>
 
-class hello{
+class hello {
 public:
 	hello(){
 		std::cout << "ctr called\n";
@@ -17,7 +17,7 @@ int main() {
 
 	delete[] array;
 
-	// //array[0] = 1;
+	// array[0] = 1;
 	// array[1] = 2;
 	// array[2] = 3;
 	// array[3] = 4;

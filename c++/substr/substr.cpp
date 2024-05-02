@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdint.h>
 
-
 bool substr_search(std::string str, std::string sub_str){
 	uint32_t count = 0;
 

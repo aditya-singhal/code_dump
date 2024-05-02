@@ -1,3 +1,5 @@
+// Singleton class: Both assignment operator and copy constructor should be made private in a Singleton class
+
 #include <iostream>
 
 class singleton {
@@ -8,6 +10,8 @@ public:
 	int value;
 	void print();
 };
+
+singleton* singleton::instance = NULL;
 
 singleton::singleton() {
 	std::cout << "singleton class constructor\n";
@@ -26,8 +30,6 @@ singleton* singleton::get_object() {
 	}
 	return instance;
 }
-
-singleton* singleton::instance = NULL;
 
 int main() {
 	singleton* obj1 = singleton::get_object();

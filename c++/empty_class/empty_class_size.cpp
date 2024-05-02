@@ -13,7 +13,6 @@ void empty::bye() {
 	int a = 0;
 }
 
-
 int main(){
 	empty obj;
 	std::cout << "size of an empty class: " << sizeof(obj) << "\n";

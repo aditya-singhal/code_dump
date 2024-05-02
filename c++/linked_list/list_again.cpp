@@ -94,10 +94,10 @@ void delete_in_the_middle_location_based(int key) {
 }
 
 void reverse_list() {
-	struct Node *pcur = NULL;
-	struct Node *prev = NULL;
-	struct Node *next = NULL;
-	
+	struct Node* pcur = NULL;
+	struct Node* prev = NULL;
+	struct Node* next = NULL;
+
 	pcur = phead;
 	while (pcur != NULL) {
 		next = pcur->next;

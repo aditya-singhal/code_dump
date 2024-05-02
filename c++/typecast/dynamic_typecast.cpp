@@ -7,42 +7,38 @@ public:
     virtual ~Base() {};
 };
 
-class Foo : public Base
-{
+class Foo : public Base {
 public:
     virtual void DoIt() { cout << "Foo\n"; }; 
-    void FooIt() { cout << "Fooing It...\n"; }
+    void FooIt() { cout << "Fooing it...\n"; }
 };
 
-class Bar : public Base
-{
+class Bar : public Base {
 public :
     virtual void DoIt() { cout << "Bar\n"; }
-    void BarIt() { cout << "baring It...\n"; }
+    void BarIt() { cout << "baring it...\n"; }
 };
 
-Base* CreateRandom()
-{
-    if( (rand()%2) == 0 )
+Base* CreateRandom() {
+    if( (rand()%2) == 0 ) {
         return new Foo;
-    else
+    } else {
         return new Bar;
+    }
 }
 
-int main()
-{
+int main() {
     for( int n = 0; n < 10; ++n ) {
         Base* base = CreateRandom();
 
         base->DoIt();
-
         Bar* bar = dynamic_cast<Bar*>(base);
         Foo* foo = dynamic_cast<Foo*>(base);
-        if( bar )
+        if ( bar ) {
             bar->BarIt();
-        if( foo )
+        } else if ( foo ) {
             foo->FooIt();
+        }
     }
   return 0;
-
 }

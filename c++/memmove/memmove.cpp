@@ -1,6 +1,6 @@
 /*
  * Both memcpy() and memmove() are producing the same outputs. I think in memcpy implementation they have 
- * taken care od address overlapping. Even though this is not mentioned in the man page.
+ * taken care of address overlapping. Even though this is not mentioned in the man page.
  */
 
 #include <iostream>

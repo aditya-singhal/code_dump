@@ -1,0 +1,2 @@
+Implemented expression:
+Output = A.(!C) + A.(!B) + B.C.(!D)

@@ -9,11 +9,17 @@ public:
 		SC_THREAD(print_hello_world);
 		dont_initialize();
 		sensitive << test.pos();
+
+		SC_METHOD(test_hello);
+	}
+
+	void test_hello() {
+		std::cout << "Method Hello world!\n";	
 	}
 
 	void print_hello_world(){
-		while(1){
-			std::cout << "Hello world!\n";
+		while(1) {
+			std::cout << "Thread Hello world!\n";
 			wait(5,SC_NS);
 		}
 	}
@@ -63,7 +69,7 @@ int sc_main( int argc, char* argv[]) {
 	hello.test.bind(s1);
 	s1.write(1);
 
-	//hello.print_hello_world();
+	hello.test_hello();	// Calling SC_METHOD explicitely
 
 	std::cout << "before sc_start!\n";
 	sc_start(100, SC_NS);

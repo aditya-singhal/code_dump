@@ -19,7 +19,6 @@ struct empty_struct {
 };
 
 int main(){
-
 	int a = 7;
 	int *ptr = &a;
 	cout << "&a: " << &a << "\n";	//&a
@@ -30,6 +29,8 @@ int main(){
 	short int array[] = {5, 10, 15, 20, 25};
 	short int *ptr1 = &array[1];
 	short int *ptr2 = &array[2];
+	cout << "ptr1: " << ptr1 << "\n";
+	cout << "ptr2: " << ptr2 << "\n";
 	cout << "ptr2 - ptr1: " << ptr2 - ptr1 << "\n";
 
 	char* c = NULL;

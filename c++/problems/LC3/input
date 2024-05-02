@@ -1,0 +1,33 @@
+# Test 1
+A 0x0000  # (0b0000 0000 0000 0000) # setting mem address to 0x0000
+D 0x24FF  # (0b0010 0100 1111 1111) # LD R2 with data on PC-offset [ (LD-4b) (R2-3b) (PCoffset-9b) ]
+D 0x26FF  # (0b0010 0110 1111 1111) # LD R3 with data on PC-offset [ (LD-4b) (R3-3b) (PCoffset-9b) ]
+
+# Till now data is loaded into R2 and R3
+
+# check ADD
+#D 0x1283  # (0b0001 0010 1000 0011) # Add R2 and R3 and copy result in R1 [ (ADD-4b) (R1-3b) (R2-3b) (0-mode-1b) (00-2b) (R3-3b) ]
+#D 0x18B6  # (0b0001 1000 1011 0110) # Add R2 and immediate and copy result in R4 [ (ADD-4b) (R1-3b) (R2-3b) (1-mode-1b) (PCoffset-5b) ]
+
+# check AND
+#D 0x5A83  # (0b0101 1010 1000 0011) # AND R2 and R3 and copy result in R5 [ (AND-4b) (R1-3b) (R2-3b) (0-mode-1b) (00-2b) (R3-3b) ]
+#D 0x5CB6  # (0b0101 1100 1011 0110) # AND R2 and immediate and copy result in R6 [ (AND-4b) (R1-3b) (R2-3b) (1-mode-1b) (PCoffset-5b) ]
+
+# check NOT
+# D 0x90BF  # (0b1001 0000 1011 1111) # NOT of R1 stored in R0 [ (NOT-4b) (R0-3b) (R1-3b) (111111-6b) ]
+
+# check ST and LD
+# D 0x34FF # (0b0011 0100 1111 1111) # ST R2 at PCoffset [ (ST-4b) (R2-3b) (PCoffset-9b) ]
+# D 0x22FE # (0b0011 0010 1111 1110) # LD R1 from PCoffset [ (ST-4b) (R1-3b) (PCoffset-9b) ] # FE because PC incremented by 1
+
+# check STI and LDI
+D 0xB6FF # (0b1011 0110 1111 1111) # STI R3 at address hold by memory at PCoffset [ (ST-4b) (R3-3b) (PCoffset-9b) ]
+D 0xA2FE # (0b1010 0010 1111 1110) # LDI R1 from address hold by memory at PCoffset [ (ST-4b) (R1-3b) (PCoffset-9b) ] # FE because PC incremented by 1
+
+
+#D 0xF000  # Trap - halting for now
+
+A 0x0100  # (0b0000 0000 0000 0000) # setting mem address to 0x0006
+D 0x1234  # (0b0001 0010 0011 0100) # Data 0x1234 = 4660
+D 0x5678  # (0b0101 0110 0111 1000) # Data 0x5678 = 22136
+D 0x0100  # (0b0000 0001 0000 0000) # holds address

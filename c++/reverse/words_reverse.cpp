@@ -6,40 +6,34 @@ using namespace std;
 
 string wordReverse(string str) 
 { 
-	int i = str.length() - 1; 
-	int start, end = i + 1; 
+	int letter_index = str.length() - 1; 
+	int start, end = letter_index + 1; 
 	string result = ""; 
 	
-	while(i >= 0) 
-	{ 
-		if(str[i] == ' ') 
-		{ 
-			start = i + 1; 
-			while(start != end) 
-				result += str[start++]; 
+	while(letter_index >= 0) { 
+		if(str[letter_index] == ' ') { 
+			start = letter_index + 1; 
+			while(start != end) {
+				result += str[start++];
+			}
 			
 			result += ' '; 
-			
-			end = i; 
+			end = letter_index; 
 		} 
-		i--; 
+		letter_index--; 
 	} 
 	start = 0; 
-	while(start != end) 
+	while(start != end) {
 		result += str[start++]; 
+	}
 	
 	return result; 
 } 
 
 // Driver code 
-int main() 
-{ 
-	string str = "I AM A GEEK"; 
-	
+int main() { 
+	string str = "I AM A GEEK";
 	cout << wordReverse(str); 
-	
 	return 0; 
 } 
 
-// This code is contributed 
-// by Imam 

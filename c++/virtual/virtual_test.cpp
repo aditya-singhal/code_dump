@@ -36,7 +36,7 @@ int main() {
 	Base* ptr2 = new Child();
 	Base& ptr3 = c;
 
-	//Child* ptr3 = new Base();
+	//Child* ptr5 = new Base();		// Compilatoin error
 	Child* ptr4 = dynamic_cast<Child*>(ptr2);	//success
 	if (ptr4 == NULL) {
 		std::cout << "NULL" << "\n";	
